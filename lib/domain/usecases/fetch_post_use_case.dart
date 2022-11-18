@@ -12,4 +12,8 @@ class FetchPostUseCase extends NoParamUseCase<List<Post>> {
   Future<List<Post>> execute() async {
     return _reo.getPost();
   }
+
+  Future<Post?> getPostDetails(int postId) async {
+    return _reo.getPostDetails(postId);
+  }
 }

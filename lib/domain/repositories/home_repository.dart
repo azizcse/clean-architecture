@@ -2,6 +2,6 @@ import '../entities/Post.dart';
 import '../entities/user.dart';
 
 abstract class HomeRepository{
-  Future<List<User>> getUsers();
+  Future<Post?> getPostDetails(int postId);
   Future<List<Post>> getPost();
 }

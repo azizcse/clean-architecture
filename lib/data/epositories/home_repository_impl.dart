@@ -7,10 +7,9 @@ import 'package:clean_arc/domain/repositories/home_repository.dart';
 
 class HomeRepositoryImpl extends HomeRepository {
   @override
-  Future<List<User>> getUsers() async {
-    List<User> userList = [];
-    var response = HomeApi.fetchUser();
-    return userList;
+  Future<Post?> getPostDetails(int postId) async {
+    var response = await HomeApi.fetchPostDetails(postId).request();
+    return Post.fromJson(response);
   }
 
   @override

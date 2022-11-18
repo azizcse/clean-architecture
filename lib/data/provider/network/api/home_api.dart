@@ -9,11 +9,14 @@ enum HomeApiType { fetchPost, fetchUser }
 
 class HomeApi extends APIRequestRepresentable {
   final HomeApiType type;
+  final int? postId;
 
-  HomeApi._({required this.type});
+  HomeApi._({required this.type, this.postId});
 
   HomeApi.fetchPost() : this._(type: HomeApiType.fetchPost);
-  HomeApi.fetchUser() : this._(type: HomeApiType.fetchUser);
+
+  HomeApi.fetchPostDetails(int postId)
+      : this._(type: HomeApiType.fetchUser, postId: postId);
 
   @override
   get body => null;
@@ -34,7 +37,7 @@ class HomeApi extends APIRequestRepresentable {
       case HomeApiType.fetchPost:
         return "/posts";
       case HomeApiType.fetchUser:
-        return '/users';
+        return '/posts/$postId';
     }
   }
 
@@ -49,6 +52,6 @@ class HomeApi extends APIRequestRepresentable {
   @override
   String get url {
     print("Url : $endpoint $path");
-    return  endpoint + path;
+    return endpoint + path;
   }
 }
