@@ -5,23 +5,23 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-class HomePageNew extends StatelessWidget {
-  const HomePageNew({super.key});
+class HomePageNew extends GetView<HomePresenter> {
+  HomePageNew({super.key});
+
+  final ItemScrollController itemScrollController = ItemScrollController();
+  final ScrollOffsetController scrollOffsetController =
+      ScrollOffsetController();
+  final ItemPositionsListener itemPositionsListener =
+      ItemPositionsListener.create();
+  final ScrollOffsetListener scrollOffsetListener =
+      ScrollOffsetListener.create();
 
   @override
   Widget build(BuildContext context) {
-    final HomePresenter presenter = Get.find<HomePresenter>();
-    final ItemScrollController itemScrollController = ItemScrollController();
-    final ScrollOffsetController scrollOffsetController =
-        ScrollOffsetController();
-    final ItemPositionsListener itemPositionsListener =
-        ItemPositionsListener.create();
-    final ScrollOffsetListener scrollOffsetListener =
-        ScrollOffsetListener.create();
     return PresentableWidgetBuilder(
-      presenter: presenter,
+      presenter: controller,
       builder: () {
-        HomeUiState uiState = presenter.uiState.value;
+        HomeUiState uiState = controller.uiState.value;
         return uiState.postList.isEmpty
             ? Container(
                 width: Get.width,
@@ -29,15 +29,17 @@ class HomePageNew extends StatelessWidget {
                 child: Center(
                   child: ElevatedButton(
                     onPressed: () {
-                      presenter.doRequest();
+                      controller.doRequest();
                     },
                     child: const Text("Click to fetch post"),
                   ),
                 ),
               )
             : ScrollablePositionedList.builder(
-                itemCount: 500,
-                itemBuilder: (context, index) => Text('Item $index'),
+                itemCount: uiState.postList.length,
+                itemBuilder: (context, index) {
+                  return Text('Item ${uiState.postList[index].title}');
+                },
                 itemScrollController: itemScrollController,
                 scrollOffsetController: scrollOffsetController,
                 itemPositionsListener: itemPositionsListener,
