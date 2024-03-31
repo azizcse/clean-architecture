@@ -2,6 +2,8 @@ import 'package:clean_arc/ui/controller/home/home_binding.dart';
 import 'package:clean_arc/ui/pages/home_page.dart';
 import 'package:get/get.dart';
 
+import '../../ui/pages/home_page_new.dart';
+
 class CleanRoute {
   CleanRoute._();
 
@@ -14,7 +16,7 @@ class ClearPages {
   static final pages = [
     GetPage(
       name: CleanRoute.home,
-      page: () => const HomePage(),
+      page: () => HomePageNew(),
       binding: HomeBinding(),
     )
   ];
