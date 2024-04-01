@@ -19,8 +19,14 @@ class ProfilePage extends GetResponsiveView<ProfileController> {
 
   @override
   Widget? phone() {
-    // TODO: implement phone
-    return super.phone();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Home"),
+      ),
+      body: SingleChildScrollView(
+        child: Container(),
+      ),
+    );
   }
 
   @override
