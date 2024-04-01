@@ -1,6 +1,7 @@
 import 'package:clean_arc/core/base/base_ui_state.dart';
+import 'package:clean_arc/domain/remote/Post.dart';
 
-import '../../../domain/entities/Post.dart';
+
 
 class HomeUiState extends BaseUiState {
   const HomeUiState({

@@ -1,6 +1,6 @@
 import 'package:clean_arc/core/usecase/no_param_usecase.dart';
+import 'package:clean_arc/domain/remote/Post.dart';
 
-import '../../../domain/entities/Post.dart';
 import '../repository/home_repository.dart';
 
 class FetchPostUseCase extends NoParamUseCase<List<Post>> {

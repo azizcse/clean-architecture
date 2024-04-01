@@ -1,11 +1,10 @@
 import 'dart:async';
 
+import 'package:clean_arc/domain/remote/Post.dart';
 import 'package:clean_arc/ui/controller/home/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-
-import '../../domain/entities/Post.dart';
 
 class HomePage extends GetView<HomeController> {
   HomePage({Key? key}) : super(key: key);
