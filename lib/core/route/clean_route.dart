@@ -1,4 +1,6 @@
 import 'package:clean_arc/ui/controller/home/home_binding.dart';
+import 'package:clean_arc/ui/details/item_details_page.dart';
+import 'package:clean_arc/ui/details/post_detail_binding.dart';
 import 'package:clean_arc/ui/pages/home_page.dart';
 import 'package:get/get.dart';
 
@@ -8,6 +10,7 @@ class CleanRoute {
   CleanRoute._();
 
   static const String home = '/home';
+  static const String detail = '/detail';
 }
 
 class ClearPages {
@@ -18,6 +21,11 @@ class ClearPages {
       name: CleanRoute.home,
       page: () => HomePageNew(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: CleanRoute.detail,
+      page: () => ItemDetailPage(),
+      binding: PostDetailBinding(),
     )
   ];
 }

@@ -1,9 +1,12 @@
 import 'package:clean_arc/core/base/presentable_widget_builder.dart';
 import 'package:clean_arc/ui/controller/home/home_presenter.dart';
 import 'package:clean_arc/ui/controller/home/home_ui_state.dart';
+import 'package:clean_arc/ui/details/item_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+
+import '../../core/route/clean_route.dart';
 
 class HomePageNew extends GetView<HomePresenter> {
   HomePageNew({super.key});
@@ -29,7 +32,8 @@ class HomePageNew extends GetView<HomePresenter> {
                 child: Center(
                   child: ElevatedButton(
                     onPressed: () {
-                      controller.doRequest();
+                      Get.toNamed(CleanRoute.detail, arguments: ["Aziz", 3]);
+                      //controller.doRequest();
                     },
                     child: const Text("Click to fetch post"),
                   ),
