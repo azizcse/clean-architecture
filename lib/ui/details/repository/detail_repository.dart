@@ -1,4 +1,4 @@
-import '../../domain/entities/Post.dart';
+import '../../../domain/entities/Post.dart';
 
 abstract class DetailRepository {
   Future<Post?> getPostDetails(int postId);

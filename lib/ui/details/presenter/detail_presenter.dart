@@ -1,7 +1,8 @@
 import 'package:clean_arc/core/base/base_presenter.dart';
-import 'package:clean_arc/ui/details/detail_ui_state.dart';
-import 'package:clean_arc/ui/details/detail_use_case.dart';
+import 'package:clean_arc/ui/details/presenter/detail_ui_state.dart';
+import 'package:clean_arc/ui/details/repository/detail_use_case.dart';
 
+import '../../../domain/entities/Post.dart';
 
 class DetailPresenter extends BasePresenter<DetailUiState> {
   DetailPresenter(this._postDetailUseCase);
@@ -32,5 +33,11 @@ class DetailPresenter extends BasePresenter<DetailUiState> {
   Future<void> toggleLoading({required bool loading}) {
     // TODO: implement toggleLoading
     throw UnimplementedError();
+  }
+
+  void fetchDetail(int i) async {
+    Post post = await _postDetailUseCase.execute(i);
+    print(post.toJson());
+    uiState.value = uiState.value.copyWith(post: post);
   }
 }

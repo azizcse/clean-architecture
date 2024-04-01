@@ -1,6 +1,6 @@
 import 'package:clean_arc/ui/controller/home/home_binding.dart';
-import 'package:clean_arc/ui/details/item_details_page.dart';
-import 'package:clean_arc/ui/details/post_detail_binding.dart';
+import 'package:clean_arc/ui/details/ui/item_details_page.dart';
+import 'package:clean_arc/ui/details/di/post_detail_binding.dart';
 import 'package:clean_arc/ui/pages/home_page.dart';
 import 'package:get/get.dart';
 
