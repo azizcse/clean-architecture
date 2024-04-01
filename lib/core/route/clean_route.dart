@@ -1,10 +1,12 @@
-import 'package:clean_arc/ui/controller/home/home_binding.dart';
+import 'package:clean_arc/ui/home/di/home_binding.dart';
 import 'package:clean_arc/ui/details/ui/item_details_page.dart';
 import 'package:clean_arc/ui/details/di/post_detail_binding.dart';
-import 'package:clean_arc/ui/pages/home_page.dart';
+
 import 'package:get/get.dart';
 
-import '../../ui/pages/home_page_new.dart';
+import '../../ui/home/ui/home_page_new.dart';
+
+
 
 class CleanRoute {
   CleanRoute._();

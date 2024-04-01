@@ -1,5 +1,5 @@
 import 'package:clean_arc/core/base/base_presenter.dart';
-import 'package:clean_arc/domain/usecases/fetch_post_use_case.dart';
+import 'package:clean_arc/ui/home/usecase/fetch_post_use_case.dart';
 import 'package:clean_arc/ui/controller/home/home_ui_state.dart';
 import 'package:get/get.dart';
 

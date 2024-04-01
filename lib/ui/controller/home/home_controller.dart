@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:clean_arc/domain/usecases/fetch_post_use_case.dart';
+import 'package:clean_arc/ui/home/usecase/fetch_post_use_case.dart';
 import 'package:get/get.dart';
 
 import '../../../domain/entities/Post.dart';

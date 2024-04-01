@@ -1,5 +1,5 @@
-import '../entities/Post.dart';
-import '../entities/user.dart';
+import '../../../domain/entities/Post.dart';
+import '../../../domain/entities/user.dart';
 
 abstract class HomeRepository{
   Future<Post?> getPostDetails(int postId);
