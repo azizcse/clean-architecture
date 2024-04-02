@@ -8,7 +8,7 @@ class PostDetailBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut(() => DetailRepositoryImpl());
-    Get.lazyPut(() => PostDetailUseCase(Get.find<DetailRepositoryImpl>()));
-    Get.lazyPut(() => DetailPresenter(Get.find<PostDetailUseCase>()));
+    Get.lazyPut(() => PostDetailUseCase(Get.find()));
+    Get.lazyPut(() => DetailPresenter(Get.find()));
   }
 }
