@@ -1,6 +1,6 @@
 
 import 'package:clean_arc/domain/remote/Post.dart';
-import 'package:clean_arc/ui/details/repository/detail_repository.dart';
+import 'package:clean_arc/presentation/details/repository/detail_repository.dart';
 
 import '../../../data/provider/network/api/home_api.dart';
 

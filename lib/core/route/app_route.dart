@@ -1,10 +1,11 @@
-import 'package:clean_arc/ui/home/di/home_binding.dart';
-import 'package:clean_arc/ui/details/ui/item_details_page.dart';
-import 'package:clean_arc/ui/details/di/post_detail_binding.dart';
 
+
+import 'package:clean_arc/presentation/details/di/post_detail_binding.dart';
+import 'package:clean_arc/presentation/details/ui/item_details_page.dart';
+import 'package:clean_arc/presentation/home/di/home_binding.dart';
+import 'package:clean_arc/presentation/home/ui/home_page.dart';
 import 'package:get/get.dart';
 
-import '../../ui/home/ui/home_page_new.dart';
 
 
 

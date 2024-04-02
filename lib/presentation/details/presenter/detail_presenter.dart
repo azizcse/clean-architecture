@@ -1,7 +1,7 @@
 import 'package:clean_arc/core/base/base_presenter.dart';
 import 'package:clean_arc/domain/remote/Post.dart';
-import 'package:clean_arc/ui/details/presenter/detail_ui_state.dart';
-import 'package:clean_arc/ui/details/usecase/detail_use_case.dart';
+import 'package:clean_arc/presentation/details/presenter/detail_ui_state.dart';
+import 'package:clean_arc/presentation/details/usecase/detail_use_case.dart';
 
 
 

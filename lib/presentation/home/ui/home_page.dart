@@ -1,12 +1,11 @@
 import 'package:clean_arc/core/base/presentable_widget_builder.dart';
-import 'package:clean_arc/ui/home/presenter/home_presenter.dart';
-import 'package:clean_arc/ui/controller/home/home_ui_state.dart';
-import 'package:clean_arc/ui/details/ui/item_details_page.dart';
+import 'package:clean_arc/presentation/home/presenter/home_presenter.dart';
+import 'package:clean_arc/presentation/home/presenter/home_ui_state.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-import '../../../core/route/clean_route.dart';
+import '../../../core/route/app_route.dart';
 
 class HomePageNew extends GetView<HomePresenter> {
   HomePageNew({super.key});
@@ -30,12 +29,22 @@ class HomePageNew extends GetView<HomePresenter> {
                 width: Get.width,
                 height: Get.height,
                 child: Center(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Get.toNamed(CleanRoute.detail, arguments: ["Aziz", 3]);
-                      //controller.doRequest();
-                    },
-                    child: const Text("Click to fetch post"),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          controller.doRequest();
+                        },
+                        child: const Text("Load data"),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Get.toNamed(CleanRoute.detail, arguments: ["Aziz", 3]);
+                        },
+                        child: const Text("GO to Next page"),
+                      ),
+                    ],
                   ),
                 ),
               )

@@ -1,4 +1,5 @@
-import 'package:clean_arc/ui/profile/profile_controller.dart';
+
+import 'package:clean_arc/presentation/profile/profile_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

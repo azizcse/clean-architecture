@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:clean_arc/data/provider/network/api/home_api.dart';
 import 'package:clean_arc/domain/remote/Post.dart';
-import 'package:clean_arc/ui/home/repository/home_repository.dart';
+import 'package:clean_arc/presentation/home/repository/home_repository.dart';
 
 class HomeRepositoryImpl extends HomeRepository {
   @override

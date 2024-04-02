@@ -1,4 +1,4 @@
-import 'package:clean_arc/core/route/clean_route.dart';
+import 'package:clean_arc/core/route/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
