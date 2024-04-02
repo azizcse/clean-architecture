@@ -1,6 +1,6 @@
 enum HTTPMethod { get, post, delete, put, patch }
 
-extension HTTPMethodString on HTTPMethod{
+extension HTTPMethodString on HTTPMethod {
   String get string {
     switch (this) {
       case HTTPMethod.get:
@@ -17,13 +17,20 @@ extension HTTPMethodString on HTTPMethod{
   }
 }
 
-abstract class APIRequestRepresentable{
+abstract class APIRequestRepresentable {
   String get url;
+
   String get endpoint;
+
   String get path;
+
   HTTPMethod get method;
+
   Map<String, String>? get headers;
+
   Map<String, String>? get query;
+
   dynamic get body;
+
   Future request();
 }

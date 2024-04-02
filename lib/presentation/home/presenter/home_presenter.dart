@@ -4,7 +4,6 @@ import 'package:clean_arc/presentation/home/presenter/home_ui_state.dart';
 import 'package:clean_arc/presentation/home/usecase/fetch_post_use_case.dart';
 import 'package:get/get.dart';
 
-
 class HomePresenter extends BasePresenter<HomeUiState> {
   HomePresenter(this._fetchPostUseCase);
 
