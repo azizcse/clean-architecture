@@ -36,13 +36,13 @@ class HomePageNew extends GetView<HomePresenter> {
                         onPressed: () {
                           controller.doRequest();
                         },
-                        child: const Text("Load data"),
+                        child: const Text("Load data here"),
                       ),
                       ElevatedButton(
                         onPressed: () {
                           Get.toNamed(CleanRoute.detail, arguments: ["Aziz", 3]);
                         },
-                        child: const Text("GO to Next page"),
+                        child: const Text("Go to Next page"),
                       ),
                     ],
                   ),
