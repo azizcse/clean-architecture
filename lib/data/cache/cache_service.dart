@@ -8,6 +8,7 @@ class CacheService extends GetxService {
   var logger = Logger(
     printer: PrettyPrinter(),
   );
+  String? _username;
 
   @override
   void onInit() {
@@ -23,5 +24,13 @@ class CacheService extends GetxService {
   @override
   void onReady() {
     super.onReady();
+  }
+
+  void setUserName(String name) {
+    _username = name;
+  }
+
+  String? getUserName() {
+    return _username;
   }
 }
